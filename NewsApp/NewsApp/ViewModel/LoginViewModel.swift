@@ -21,6 +21,10 @@ final class LoginViewModel: ObservableObject {
     func signIn() {
         authService.signIn(email: email, password: password)
     }
+    
+    func googleSignIn() async {
+        try? await authService.googleSignIn()
+    }
 }
 
 private extension LoginViewModel {
