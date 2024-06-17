@@ -1,4 +1,5 @@
 import SwiftUI
+import GoogleSignInSwift
 
 struct SignUpView: View {
     @ObservedObject var vm: SignUpViewModel = SignUpViewModel()
@@ -14,7 +15,13 @@ struct SignUpView: View {
             Spacer().frame(height: 24)
             Text("Continue with").fontWeight(.bold).font(.title3)
             Spacer().frame(height: 12)
-            Text("Google button")
+            GoogleSignInButton(style: .icon) {
+                Task {
+                    do {
+                        await vm.googleSignIn()
+                    }
+                }
+            }
             Spacer().frame(height: 12)
             Text("or").fontWeight(.bold).font(.title3)
             Spacer().frame(height: 12)

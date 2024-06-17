@@ -74,9 +74,6 @@
         }
       }
     },
-    "Google button" : {
-
-    },
     "Login" : {
       "extractionState" : "manual",
       "localizations" : {

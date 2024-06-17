@@ -22,6 +22,10 @@ final class SignUpViewModel: ObservableObject {
     func signUp() {
         authService.signUp(email: email, password: password)
     }
+    
+    func googleSignIn() async {
+        try? await authService.googleSignIn()
+    }
 }
 
 
