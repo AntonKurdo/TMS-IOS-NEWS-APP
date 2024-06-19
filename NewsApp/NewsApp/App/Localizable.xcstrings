@@ -21,6 +21,17 @@
         }
       }
     },
+    "Always in your pockets" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мы всегда с Вами!"
+          }
+        }
+      }
+    },
     "Continue with" : {
       "localizations" : {
         "ru" : {
@@ -74,6 +85,27 @@
         }
       }
     },
+    "Finish" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закончить"
+          }
+        }
+      }
+    },
+    "Get the news faster than others..." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Получайте новости первым..."
+          }
+        }
+      }
+    },
     "Login" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -96,7 +128,24 @@
       }
     },
     "Logout" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выйти"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "След"
+          }
+        }
+      }
     },
     "or" : {
       "localizations" : {
@@ -115,6 +164,27 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пароль"
+          }
+        }
+      }
+    },
+    "Prev" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пред"
+          }
+        }
+      }
+    },
+    "Read about important events on fly..." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Читайте о важных событиях на лету..."
           }
         }
       }
@@ -178,6 +248,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Зарегистрироваться "
+          }
+        }
+      }
+    },
+    "Skip" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пропустить"
           }
         }
       }
