@@ -12,7 +12,7 @@ struct ContentView: View {
             NavigationView {
                 if authService.isAuth {
                     if isOnboardingFinished {
-                        MainView()
+                        Tabs()
                     } else {
                         OnboardingView()
                     }

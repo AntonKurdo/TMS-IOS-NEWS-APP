@@ -85,6 +85,9 @@
         }
       }
     },
+    "Favourites" : {
+
+    },
     "Finish" : {
       "localizations" : {
         "ru" : {
@@ -105,6 +108,9 @@
           }
         }
       }
+    },
+    "Home" : {
+
     },
     "Login" : {
       "extractionState" : "manual",
@@ -177,6 +183,9 @@
           }
         }
       }
+    },
+    "Profile" : {
+
     },
     "Read about important events on fly..." : {
       "extractionState" : "manual",

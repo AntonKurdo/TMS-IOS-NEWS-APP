@@ -6,16 +6,12 @@ struct OnboardingView: View {
         let text: String
     }
     
-
-    
     @State private var images: [OnboardingItem] = [OnboardingItem(img: .onboarding1, text: "Get the news faster than others..."), OnboardingItem(img: .onboarding2, text: "Read about important events on fly..."), OnboardingItem(img: .onboarding3, text: "Always in your pockets")]
     
     @ObservedObject var vm: OnboardingViewModel = OnboardingViewModel()
     
     init() {
         UIScrollView.appearance().bounces = false
-        
-//        label =images[0].text
     }
     
     var body: some View {
@@ -26,8 +22,8 @@ struct OnboardingView: View {
                         ZStack(alignment: .top) {
                             Image(uiImage: images[imageIdx].img)
                                 .resizable()
-                                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.85)
-                                .aspectRatio(contentMode: .fill)
+                                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.75)
+                                .aspectRatio(contentMode: .fit)
                             LinearGradient(colors: [.black.opacity(0), .black.opacity(0.8)], startPoint: .center, endPoint: .bottom)
                         }
                         .id(imageIdx)
