@@ -5,11 +5,18 @@ import GoogleSignIn
 struct NewsApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    @StateObject var alerter: Alerter = Alerter()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView().onOpenURL { url in
-                GIDSignIn.sharedInstance.handle(url)
-            }
+            SplashView()
+                .environmentObject(alerter)
+                .alert(isPresented: $alerter.isShowingAlert) {
+                    alerter.alert ?? Alert(title: Text(""))
+                }
+                .onOpenURL { url in
+                    GIDSignIn.sharedInstance.handle(url)
+                }
         }
     }
 }
