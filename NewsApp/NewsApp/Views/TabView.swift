@@ -28,7 +28,7 @@ struct Tabs: View {
                         Label("Profile", systemImage: "person.fill")
                     }.tag(Tab.profile)
             }
-            CustomBottomTabBarView(currentTab: $selectedTab).padding(.bottom)
+            CustomBottomTabBarView(currentTab: $selectedTab)
         }
     }
 }

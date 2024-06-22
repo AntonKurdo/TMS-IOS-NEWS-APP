@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "*" : {
       "localizations" : {
         "ru" : {
@@ -85,8 +88,25 @@
         }
       }
     },
+    "Error" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка"
+          }
+        }
+      }
+    },
     "Favourites" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Интересное"
+          }
+        }
+      }
     },
     "Finish" : {
       "localizations" : {
@@ -110,7 +130,14 @@
       }
     },
     "Home" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Главная"
+          }
+        }
+      }
     },
     "Login" : {
       "extractionState" : "manual",
@@ -139,6 +166,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выйти"
+          }
+        }
+      }
+    },
+    "Newsify" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Newsify"
           }
         }
       }
@@ -185,7 +222,14 @@
       }
     },
     "Profile" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профиль"
+          }
+        }
+      }
     },
     "Read about important events on fly..." : {
       "extractionState" : "manual",

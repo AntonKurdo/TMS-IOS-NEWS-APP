@@ -4,6 +4,7 @@ import GoogleSignInSwift
 struct SignUpView: View {
     @ObservedObject var vm: SignUpViewModel = SignUpViewModel()
     
+    @EnvironmentObject var alerter: Alerter
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
@@ -37,7 +38,7 @@ struct SignUpView: View {
             .safeAreaInset(edge: .bottom, content: {
                 VStack {
                     TextButton(buttonLabel: "Sign Up", isDisabled: $vm.isButtonDisabled) {
-                        self.vm.signUp()
+                        self.vm.signUp(alerter: alerter)
                     }
                     .padding(.top, 33)
                     .padding(.bottom, 12)
