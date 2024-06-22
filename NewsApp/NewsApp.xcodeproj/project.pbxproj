@@ -15,6 +15,9 @@
 		043AA07D2C0E3F290008E641 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AA07C2C0E3F290008E641 /* ContentView.swift */; };
 		043AA07F2C0E3F2B0008E641 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043AA07E2C0E3F2B0008E641 /* Assets.xcassets */; };
 		043AA0822C0E3F2B0008E641 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043AA0812C0E3F2B0008E641 /* Preview Assets.xcassets */; };
+		046A00EF2C22ED4500A8586B /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A00EE2C22ED4500A8586B /* TabView.swift */; };
+		0482C50B2C2622D8006EBD27 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482C50A2C2622D8006EBD27 /* CustomTabBar.swift */; };
+		0482C50E2C262348006EBD27 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482C50D2C262348006EBD27 /* Tabs.swift */; };
 		04A521EF2C1DF80B00FE8710 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A521EE2C1DF80B00FE8710 /* LoginViewModel.swift */; };
 		04A521F12C1DFD2200FE8710 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A521F02C1DFD2200FE8710 /* SignUpView.swift */; };
 		04A521F32C1E06E100FE8710 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A521F22C1E06E100FE8710 /* SignUpViewModel.swift */; };
@@ -95,6 +98,9 @@
 		043AA07C2C0E3F290008E641 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		043AA07E2C0E3F2B0008E641 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043AA0812C0E3F2B0008E641 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		046A00EE2C22ED4500A8586B /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		0482C50A2C2622D8006EBD27 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		0482C50D2C262348006EBD27 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		04A521EE2C1DF80B00FE8710 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		04A521F02C1DFD2200FE8710 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		04A521F22C1E06E100FE8710 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 		043AA0792C0E3F290008E641 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				0482C50C2C262339006EBD27 /* Enums */,
 				04B4DF172C1F079D00EA41C7 /* Utils */,
 				04A522332C1E135D00FE8710 /* Services */,
 				04ECD0252C1A2412001BB887 /* Components */,
@@ -238,8 +245,17 @@
 				0418F8002C20B24300E5C8F4 /* OnboardingView.swift */,
 				04ECD0222C1A23B2001BB887 /* LoginView.swift */,
 				04A521F02C1DFD2200FE8710 /* SignUpView.swift */,
+				046A00EE2C22ED4500A8586B /* TabView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0482C50C2C262339006EBD27 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				0482C50D2C262348006EBD27 /* Tabs.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		04A522332C1E135D00FE8710 /* Services */ = {
@@ -275,6 +291,7 @@
 				0418F7FE2C20B15A00E5C8F4 /* PaginationIndicator.swift */,
 				04ECD02A2C1A30ED001BB887 /* TextButton.swift */,
 				04ECD0282C1A2DD2001BB887 /* SecuredTextInput.swift */,
+				0482C50A2C2622D8006EBD27 /* CustomTabBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -419,6 +436,8 @@
 				04ECD02B2C1A30ED001BB887 /* TextButton.swift in Sources */,
 				04ECD0292C1A2DD2001BB887 /* SecuredTextInput.swift in Sources */,
 				04DF18422C21B041008FBA61 /* OnboardingViewModel.swift in Sources */,
+				0482C50B2C2622D8006EBD27 /* CustomTabBar.swift in Sources */,
+				0482C50E2C262348006EBD27 /* Tabs.swift in Sources */,
 				043AA07D2C0E3F290008E641 /* ContentView.swift in Sources */,
 				04B4DF192C1F08B000EA41C7 /* UserDefaultsWrapper.swift in Sources */,
 				04A521F32C1E06E100FE8710 /* SignUpViewModel.swift in Sources */,
@@ -426,6 +445,7 @@
 				04A521F12C1DFD2200FE8710 /* SignUpView.swift in Sources */,
 				043AA07B2C0E3F290008E641 /* NewsApp.swift in Sources */,
 				04ECD0272C1A242A001BB887 /* TextInput.swift in Sources */,
+				046A00EF2C22ED4500A8586B /* TabView.swift in Sources */,
 				04A522322C1E11E200FE8710 /* AppDelegate.swift in Sources */,
 				0418F7FF2C20B15A00E5C8F4 /* PaginationIndicator.swift in Sources */,
 				04A521EF2C1DF80B00FE8710 /* LoginViewModel.swift in Sources */,
