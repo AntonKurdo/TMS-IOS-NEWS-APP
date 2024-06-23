@@ -54,6 +54,15 @@
 		04A522352C1E136D00FE8710 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A522342C1E136D00FE8710 /* AuthService.swift */; };
 		04B0B13A2C270606009AF688 /* Alerter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0B1392C270606009AF688 /* Alerter.swift */; };
 		04B0B13C2C270FCD009AF688 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0B13B2C270FCD009AF688 /* SplashView.swift */; };
+		04B0B13E2C271A0D009AF688 /* PopularNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0B13D2C271A0D009AF688 /* PopularNews.swift */; };
+		04B0B1412C271C2C009AF688 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0B1402C271C2C009AF688 /* NewsModel.swift */; };
+		04B0B1462C271D61009AF688 /* NewsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0B1452C271D61009AF688 /* NewsApi.swift */; };
+		04B0B1482C272317009AF688 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0B1472C272317009AF688 /* HomeViewModel.swift */; };
+		04B0B14B2C272982009AF688 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 04B0B14A2C272982009AF688 /* Alamofire */; };
+		04B0B14D2C272982009AF688 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 04B0B14C2C272982009AF688 /* AlamofireDynamic */; };
+		04B0B14F2C282FAA009AF688 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0B14E2C282FAA009AF688 /* DateFormatter.swift */; };
+		04B0B1522C28315B009AF688 /* SkeletonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 04B0B1512C28315B009AF688 /* SkeletonUI */; };
+		04B0B1542C283C11009AF688 /* CategoryNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0B1532C283C11009AF688 /* CategoryNews.swift */; };
 		04B4DF192C1F08B000EA41C7 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4DF182C1F08B000EA41C7 /* UserDefaultsWrapper.swift */; };
 		04B4DF1B2C1F136A00EA41C7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 04B4DF1A2C1F136A00EA41C7 /* FirebaseAnalytics */; };
 		04B4DF1D2C1F136A00EA41C7 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 04B4DF1C2C1F136A00EA41C7 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -82,7 +91,7 @@
 		04B4DF4B2C1F139200EA41C7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 04B4DF4A2C1F139200EA41C7 /* FirebaseStorage */; };
 		04B4DF4D2C1F139200EA41C7 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 04B4DF4C2C1F139200EA41C7 /* FirebaseStorageCombine-Community */; };
 		04B4DF4F2C1F139200EA41C7 /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = 04B4DF4E2C1F139200EA41C7 /* FirebaseVertexAI-Preview */; };
-		04DF18402C21A793008FBA61 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF183F2C21A793008FBA61 /* MainView.swift */; };
+		04DF18402C21A793008FBA61 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF183F2C21A793008FBA61 /* HomeView.swift */; };
 		04DF18422C21B041008FBA61 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF18412C21B041008FBA61 /* OnboardingViewModel.swift */; };
 		04ECD0212C1A220B001BB887 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 04ECD0202C1A220B001BB887 /* Localizable.xcstrings */; };
 		04ECD0232C1A23B2001BB887 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECD0222C1A23B2001BB887 /* LoginView.swift */; };
@@ -111,8 +120,14 @@
 		04A522342C1E136D00FE8710 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		04B0B1392C270606009AF688 /* Alerter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerter.swift; sourceTree = "<group>"; };
 		04B0B13B2C270FCD009AF688 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		04B0B13D2C271A0D009AF688 /* PopularNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularNews.swift; sourceTree = "<group>"; };
+		04B0B1402C271C2C009AF688 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		04B0B1452C271D61009AF688 /* NewsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApi.swift; sourceTree = "<group>"; };
+		04B0B1472C272317009AF688 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		04B0B14E2C282FAA009AF688 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		04B0B1532C283C11009AF688 /* CategoryNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryNews.swift; sourceTree = "<group>"; };
 		04B4DF182C1F08B000EA41C7 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
-		04DF183F2C21A793008FBA61 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		04DF183F2C21A793008FBA61 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		04DF18412C21B041008FBA61 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		04ECD0202C1A220B001BB887 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		04ECD0222C1A23B2001BB887 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -137,6 +152,7 @@
 				04A521F82C1E108200FE8710 /* FirebaseAnalytics in Frameworks */,
 				04B4DF392C1F139200EA41C7 /* FirebaseDatabaseSwift in Frameworks */,
 				04A521FA2C1E108200FE8710 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				04B0B14D2C272982009AF688 /* AlamofireDynamic in Frameworks */,
 				04B4DF252C1F139200EA41C7 /* FirebaseAnalytics in Frameworks */,
 				04B4DF372C1F139200EA41C7 /* FirebaseDatabase in Frameworks */,
 				04B4DF1F2C1F136A00EA41C7 /* FirebaseAnalyticsSwift in Frameworks */,
@@ -147,8 +163,10 @@
 				04B4DF3D2C1F139200EA41C7 /* FirebaseFirestore in Frameworks */,
 				04A522202C1E108200FE8710 /* FirebaseMLModelDownloader in Frameworks */,
 				04B4DF332C1F139200EA41C7 /* FirebaseAuthCombine-Community in Frameworks */,
+				04B0B14B2C272982009AF688 /* Alamofire in Frameworks */,
 				04B4DF4F2C1F139200EA41C7 /* FirebaseVertexAI-Preview in Frameworks */,
 				04B4DF1D2C1F136A00EA41C7 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				04B0B1522C28315B009AF688 /* SkeletonUI in Frameworks */,
 				04B4DF232C1F136A00EA41C7 /* FirebaseAppCheck in Frameworks */,
 				04B4DF472C1F139200EA41C7 /* FirebaseRemoteConfig in Frameworks */,
 				04A522142C1E108200FE8710 /* FirebaseFirestoreSwift in Frameworks */,
@@ -208,6 +226,8 @@
 		043AA0792C0E3F290008E641 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				04B0B1422C271D1E009AF688 /* API */,
+				04B0B13F2C271C1E009AF688 /* Models */,
 				0482C50C2C262339006EBD27 /* Enums */,
 				04B4DF172C1F079D00EA41C7 /* Utils */,
 				04A522332C1E135D00FE8710 /* Services */,
@@ -245,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				043AA07C2C0E3F290008E641 /* ContentView.swift */,
-				04DF183F2C21A793008FBA61 /* MainView.swift */,
+				04DF183F2C21A793008FBA61 /* HomeView.swift */,
 				0418F8002C20B24300E5C8F4 /* OnboardingView.swift */,
 				04ECD0222C1A23B2001BB887 /* LoginView.swift */,
 				04A521F02C1DFD2200FE8710 /* SignUpView.swift */,
@@ -271,9 +291,26 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		04B0B13F2C271C1E009AF688 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04B0B1402C271C2C009AF688 /* NewsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04B0B1422C271D1E009AF688 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				04B0B1452C271D61009AF688 /* NewsApi.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		04B4DF172C1F079D00EA41C7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				04B0B14E2C282FAA009AF688 /* DateFormatter.swift */,
 				04B4DF182C1F08B000EA41C7 /* UserDefaultsWrapper.swift */,
 				04B0B1392C270606009AF688 /* Alerter.swift */,
 			);
@@ -284,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				04A521EE2C1DF80B00FE8710 /* LoginViewModel.swift */,
+				04B0B1472C272317009AF688 /* HomeViewModel.swift */,
 				04DF18412C21B041008FBA61 /* OnboardingViewModel.swift */,
 				04A521F22C1E06E100FE8710 /* SignUpViewModel.swift */,
 			);
@@ -293,6 +331,8 @@
 		04ECD0252C1A2412001BB887 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				04B0B13D2C271A0D009AF688 /* PopularNews.swift */,
+				04B0B1532C283C11009AF688 /* CategoryNews.swift */,
 				04ECD0262C1A242A001BB887 /* TextInput.swift */,
 				0418F7FE2C20B15A00E5C8F4 /* PaginationIndicator.swift */,
 				04ECD02A2C1A30ED001BB887 /* TextButton.swift */,
@@ -376,6 +416,9 @@
 				04B4DF4E2C1F139200EA41C7 /* FirebaseVertexAI-Preview */,
 				040161832C20991C00638BC5 /* GoogleSignIn */,
 				040161852C20991C00638BC5 /* GoogleSignInSwift */,
+				04B0B14A2C272982009AF688 /* Alamofire */,
+				04B0B14C2C272982009AF688 /* AlamofireDynamic */,
+				04B0B1512C28315B009AF688 /* SkeletonUI */,
 			);
 			productName = NewsApp;
 			productReference = 043AA0772C0E3F290008E641 /* NewsApp.app */;
@@ -409,6 +452,8 @@
 			packageReferences = (
 				04A521F62C1E108200FE8710 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				040161822C20991C00638BC5 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				04B0B1492C272982009AF688 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				04B0B1502C28315B009AF688 /* XCRemoteSwiftPackageReference "SkeletonUI" */,
 			);
 			productRefGroup = 043AA0782C0E3F290008E641 /* Products */;
 			projectDirPath = "";
@@ -439,24 +484,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				04ECD0232C1A23B2001BB887 /* LoginView.swift in Sources */,
+				04B0B1412C271C2C009AF688 /* NewsModel.swift in Sources */,
 				04ECD02B2C1A30ED001BB887 /* TextButton.swift in Sources */,
+				04B0B1482C272317009AF688 /* HomeViewModel.swift in Sources */,
+				04B0B1542C283C11009AF688 /* CategoryNews.swift in Sources */,
 				04ECD0292C1A2DD2001BB887 /* SecuredTextInput.swift in Sources */,
 				04DF18422C21B041008FBA61 /* OnboardingViewModel.swift in Sources */,
 				0482C50B2C2622D8006EBD27 /* CustomTabBar.swift in Sources */,
 				0482C50E2C262348006EBD27 /* Tabs.swift in Sources */,
+				04B0B1462C271D61009AF688 /* NewsApi.swift in Sources */,
 				043AA07D2C0E3F290008E641 /* ContentView.swift in Sources */,
 				04B4DF192C1F08B000EA41C7 /* UserDefaultsWrapper.swift in Sources */,
+				04B0B14F2C282FAA009AF688 /* DateFormatter.swift in Sources */,
 				04A521F32C1E06E100FE8710 /* SignUpViewModel.swift in Sources */,
 				04A522352C1E136D00FE8710 /* AuthService.swift in Sources */,
 				04A521F12C1DFD2200FE8710 /* SignUpView.swift in Sources */,
 				04B0B13A2C270606009AF688 /* Alerter.swift in Sources */,
 				043AA07B2C0E3F290008E641 /* NewsApp.swift in Sources */,
+				04B0B13E2C271A0D009AF688 /* PopularNews.swift in Sources */,
 				04ECD0272C1A242A001BB887 /* TextInput.swift in Sources */,
 				046A00EF2C22ED4500A8586B /* TabView.swift in Sources */,
 				04A522322C1E11E200FE8710 /* AppDelegate.swift in Sources */,
 				0418F7FF2C20B15A00E5C8F4 /* PaginationIndicator.swift in Sources */,
 				04A521EF2C1DF80B00FE8710 /* LoginViewModel.swift in Sources */,
-				04DF18402C21A793008FBA61 /* MainView.swift in Sources */,
+				04DF18402C21A793008FBA61 /* HomeView.swift in Sources */,
 				0418F8012C20B24300E5C8F4 /* OnboardingView.swift in Sources */,
 				04B0B13C2C270FCD009AF688 /* SplashView.swift in Sources */,
 			);
@@ -692,6 +743,22 @@
 				minimumVersion = 10.27.0;
 			};
 		};
+		04B0B1492C272982009AF688 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		04B0B1502C28315B009AF688 /* XCRemoteSwiftPackageReference "SkeletonUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CSolanaM/SkeletonUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -844,6 +911,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 04A521F62C1E108200FE8710 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseVertexAI-Preview";
+		};
+		04B0B14A2C272982009AF688 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04B0B1492C272982009AF688 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		04B0B14C2C272982009AF688 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04B0B1492C272982009AF688 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		04B0B1512C28315B009AF688 /* SkeletonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04B0B1502C28315B009AF688 /* XCRemoteSwiftPackageReference "SkeletonUI" */;
+			productName = SkeletonUI;
 		};
 		04B4DF1A2C1F136A00EA41C7 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

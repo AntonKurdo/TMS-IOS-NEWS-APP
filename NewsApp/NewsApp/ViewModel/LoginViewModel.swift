@@ -5,9 +5,7 @@ import Combine
 final class LoginViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
-    
-    
-    
+
     @Published var isButtonDisabled = true
     
     private var publishers = Set<AnyCancellable>()
