@@ -78,7 +78,7 @@ struct OnboardingView: View {
                 HStack {
                     Spacer()
                     NavigationLink {
-                        MainView().navigationBarBackButtonHidden(true)
+                        Tabs().navigationBarBackButtonHidden(true)
                     } label: {
                         Text(vm.scrolledID ?? 0 < images.count - 1 ? "Skip" : "Finish").foregroundColor(.white).buttonStyle(.borderedProminent).font(.system(size: 20))
                     }

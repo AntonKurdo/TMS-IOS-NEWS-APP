@@ -130,6 +130,7 @@
       }
     },
     "Home" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
@@ -161,6 +162,7 @@
       }
     },
     "Logout" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
@@ -207,6 +209,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пароль"
+          }
+        }
+      }
+    },
+    "Popular News" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Популярное"
           }
         }
       }
@@ -260,6 +272,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вредите пароль еще раз..."
+          }
+        }
+      }
+    },
+    "See All" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все"
           }
         }
       }

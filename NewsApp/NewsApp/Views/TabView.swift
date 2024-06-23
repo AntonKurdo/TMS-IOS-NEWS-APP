@@ -10,23 +10,9 @@ struct Tabs: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $selectedTab) {
-                NavigationStack {
-                    MainView()
-                        .navigationTitle("Home")
-                }
-                .tabItem {
-                    Label("Home", systemImage: "house.fill")
-                }.tag(Tab.home)
-                
-                Text("Favourites")
-                    .tabItem {
-                        Label("Favourites", systemImage: "heart.fill")
-                    }.tag(Tab.favourites)
-                
-                Text("Profile")
-                    .tabItem {
-                        Label("Profile", systemImage: "person.fill")
-                    }.tag(Tab.profile)
+                HomeView().tag(Tab.home)
+                Text("Favourites").tag(Tab.favourites)
+                Text("Profile").tag(Tab.profile)
             }
             CustomBottomTabBarView(currentTab: $selectedTab)
         }
