@@ -6,7 +6,7 @@ class NewsApi {
     
     private init() {}
     
-    let baseUrl = "https://saurav.tech/NewsAPI"
+    private let baseUrl = "https://saurav.tech/NewsAPI"
     
     private let queue = DispatchQueue(label: "com.newsify.api")
     

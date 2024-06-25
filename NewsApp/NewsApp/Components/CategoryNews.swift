@@ -30,6 +30,7 @@ struct CategoryNews: View {
                                     LinearGradient(colors: [.white.opacity(0.8), .white.opacity(1)], startPoint: .leading, endPoint: .trailing)
                                 }
                         }
+                        .disabled(loading)
                     }
                 }
             }
@@ -58,25 +59,30 @@ struct CategoryNewsItem: View {
     var newsItem: Article
     
     var body: some View {
-        ZStack(alignment: .top) {
-            if let url = newsItem.urlToImage {
-                AsyncImage(url: URL(string: url)) { result in
-                    result.image?.resizable()
+        NavigationLink {
+            DetailsView(newsItem: newsItem)
+        } label: {
+            ZStack(alignment: .top) {
+                if let url = newsItem.urlToImage {
+                    AsyncImage(url: URL(string: url)) { result in
+                        result.image?.resizable().aspectRatio(contentMode: .fill)
+                    }
                 }
+                Color(.black.withAlphaComponent(0.5))
             }
-            Color(.black.withAlphaComponent(0.5))
-            VStack {
-                Text(newsItem.title).foregroundColor(.white).font(.system(size: 16)).lineLimit(3)
-            }.padding()
+            .frame(width: UIScreen.main.bounds.width * 0.9, height: 160)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(alignment: .top, content: {
+                Text(newsItem.title).foregroundColor(.white).font(.system(size: 16)).lineLimit(3).padding()
+            })
+            .overlay(alignment: .bottom) {
+                HStack {
+                    Text(newsItem.author ?? "").foregroundColor(.white).font(.system(size: 10))
+                    Spacer()
+                    Text(DateFormatUtil.dateISOToString(newsItem.publishedAt)).foregroundStyle(.white).font(.system(size: 8))
+                }.padding(.all, 8)
+            }
         }
-        .frame(width: UIScreen.main.bounds.width * 0.9, height: 160)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-        .overlay(alignment: .bottom) {
-            HStack {
-                Text(newsItem.author ?? "").foregroundColor(.white).font(.system(size: 10))
-                Spacer()
-                Text(DateFormatter.dateISOToString(newsItem.publishedAt)).foregroundStyle(.white).font(.system(size: 8))
-            }.padding(.all, 8)
-        }
+
     }
 }
