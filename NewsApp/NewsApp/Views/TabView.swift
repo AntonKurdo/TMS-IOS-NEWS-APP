@@ -3,6 +3,8 @@ import SwiftUI
 struct Tabs: View {
     @State private var selectedTab: Tab = .home
     
+    private let authService = AuthService.shared
+    
     init() {
         UITabBar.appearance().isHidden = true
     }
@@ -12,7 +14,13 @@ struct Tabs: View {
             TabView(selection: $selectedTab) {
                 HomeView().tag(Tab.home)
                 Text("Favourites").tag(Tab.favourites)
-                Text("Profile").tag(Tab.profile)
+                VStack {
+                    Button {
+                        authService.logout()
+                    } label: {
+                        Text("Logout").foregroundColor(.black)
+                    }
+                }.tag(Tab.profile)
             }
             CustomBottomTabBarView(currentTab: $selectedTab)
         }

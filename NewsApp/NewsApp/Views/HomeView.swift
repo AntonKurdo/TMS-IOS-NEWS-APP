@@ -8,11 +8,19 @@ struct HomeView: View {
     
     @ObservedObject var vm: HomeViewModel = HomeViewModel()
     
+    private func fetchAllData() {
+        vm.fetchPopularNews(alerter: alerter)
+        vm.fetchCategoryNews(alerter: alerter)
+    }
+    
     var body: some View {
         ScrollView {
             PopularNews(news: $vm.popularNews, loading: $vm.popularNewsLoading)
             Spacer().frame(height: 32)
             CategoryNews(newsCategories: vm.newsCategories, news: $vm.categoryNews, loading: $vm.categoryNewsLoading, activeCategory: $vm.activeCategory)
+        }
+        .refreshable {
+            fetchAllData()
         }
         .contentMargins(.bottom, 75)
         .onChange(of: vm.activeCategory, { _, _ in
@@ -20,8 +28,7 @@ struct HomeView: View {
         })
         .onAppear {
             if !viewDidMount {
-                vm.fetchPopularNews(alerter: alerter)
-                vm.fetchCategoryNews(alerter: alerter)
+                fetchAllData()
                 viewDidMount = true
             }
         }
