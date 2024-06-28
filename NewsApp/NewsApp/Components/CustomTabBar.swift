@@ -5,6 +5,8 @@ private let buttonDimen: CGFloat = 70
 struct CustomBottomTabBarView: View {
     
     @Binding var currentTab: Tab
+    @EnvironmentObject var sharedFavouritesVM: FavouritesViewModel
+
     
     var body: some View {
         HStack {
@@ -15,13 +17,21 @@ struct CustomBottomTabBarView: View {
                 }
             
             Spacer()
-
-            TabBarButton(imageName: Tab.favourites.rawValue)
-                .frame(width: buttonDimen, height: buttonDimen)
-                .onTapGesture {
-                    currentTab = .favourites
-                }
-
+            
+                TabBarButton(imageName: Tab.favourites.rawValue)
+                    .frame(width: buttonDimen, height: buttonDimen)
+                    .onTapGesture {
+                        currentTab = .favourites
+                    }.overlay {
+                        if currentTab != .favourites && !sharedFavouritesVM.news.isEmpty {
+                            ZStack {
+                                Color(.red)
+                                Text(String(sharedFavouritesVM.news.count)).frame(width: 20, height: 20).foregroundColor(.white).clipped()
+                            }.frame(width: 20, height: 20).clipShape(.circle).position(CGPoint(x: 50, y: 20)).zIndex(100)
+                        }
+             
+                    }
+    
             Spacer()
             
             TabBarButton(imageName: Tab.profile.rawValue)
@@ -46,11 +56,13 @@ struct CustomBottomTabBarView: View {
 
 private struct TabBarButton: View {
     let imageName: String
+    
     var body: some View {
         Image(systemName: imageName)
             .renderingMode(.template)
             .tint(.black)
             .fontWeight(.bold)
+        
     }
 }
 
@@ -62,10 +74,10 @@ struct SelectedTabCircleView: View {
         switch currentTab {
         case .home:
             return -100
-    
+            
         case .favourites:
             return 0
-      
+            
         case .profile:
             return 100
         }
@@ -82,6 +94,6 @@ struct SelectedTabCircleView: View {
         }
         .offset(x: horizontalOffset)
     }
-
+    
 }
 

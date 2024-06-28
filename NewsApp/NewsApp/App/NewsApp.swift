@@ -13,6 +13,8 @@ struct NewsApp: App {
     @StateObject var alerter: Alerter = Alerter()
     @State var appSettings = AppSettings()
     
+    @ObservedObject var sharedFavouritesViewModal: FavouritesViewModel = FavouritesViewModel()
+    
     @UserDefaultsWrapper<String>(key: "app_language", default: "en") var appLanguage
     
     var body: some Scene {
@@ -21,12 +23,14 @@ struct NewsApp: App {
                 .environment(appSettings)
                 .environment(\.locale, appSettings.locale)
                 .environmentObject(alerter)
+                .environmentObject(sharedFavouritesViewModal)
                 .alert(isPresented: $alerter.isShowingAlert) {
                     alerter.alert ?? Alert(title: Text(""))
                 }
                 .onOpenURL { url in
                     GIDSignIn.sharedInstance.handle(url)
                 }.onAppear {
+                    sharedFavouritesViewModal.pullNewsFromStore()
                     switch appLanguage {
                     case "en":
                         appSettings.locale = Locale(identifier: "en")

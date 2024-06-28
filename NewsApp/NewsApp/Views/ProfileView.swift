@@ -45,7 +45,6 @@ struct ProfileView: View {
             }
             Spacer()
         }
-        .navigationTitle("Settings")
         .onAppear {
             vm.getDataFromStorage()
         }

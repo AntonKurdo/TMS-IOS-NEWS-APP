@@ -15,9 +15,12 @@ struct Tabs: View {
                 NavigationView {
                     HomeView()
                 }.tag(Tab.home)
-                Text("Favourites").tag(Tab.favourites)
-                ProfileView()
-                    .tag(Tab.profile)
+                
+                NavigationView {
+                    FavouritesView()
+                }.tag(Tab.favourites)
+                
+                ProfileView().tag(Tab.profile)
                 
             }
             CustomBottomTabBarView(currentTab: $selectedTab)

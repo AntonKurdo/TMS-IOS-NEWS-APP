@@ -25,7 +25,6 @@ final class AuthService: ObservableObject {
         DispatchQueue.global().async {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if error != nil {
-                    print(error ?? "")
                     if let error = error {
                         DispatchQueue.main.async {
                             errorCompletion?(error)
@@ -64,7 +63,7 @@ final class AuthService: ObservableObject {
                 GIDSignIn.sharedInstance.signOut()
                 try  self.firebaseAuth.signOut()
             } catch let signOutError as NSError {
-                print("Error signing out: %@", signOutError)
+                print("Error signing out: ", signOutError)
             }
         }
         

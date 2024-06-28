@@ -26,14 +26,14 @@ final class ProfileViewModal: ObservableObject {
     
     private var didMount = false
     
-    private let firestreService = FirestoreService.shared
+    private let firestoreService = FirestoreService.shared
     private let authService = AuthService.shared
     
     @Published var loading = true
     @Published var avatarUrl = "" {
         didSet {
             guard let userId = authService.firebaseAuth.currentUser?.uid else { return }
-            firestreService.addOrUpdateDocument(userId: userId, fieldName: ProperiesNames.avatarUrl, property: avatarUrl)
+            firestoreService.addOrUpdateDocument(userId: userId, fieldName: ProperiesNames.avatarUrl, property: avatarUrl)
         }
     }
     @Published var uiImage: UIImage? = nil
@@ -41,13 +41,13 @@ final class ProfileViewModal: ObservableObject {
     @Published var firstName: String = "" {
         didSet {
             guard let userId = authService.firebaseAuth.currentUser?.uid else { return }
-            firestreService.addOrUpdateDocument(userId: userId, fieldName: ProperiesNames.firstName, property: firstName)
+            firestoreService.addOrUpdateDocument(userId: userId, fieldName: ProperiesNames.firstName, property: firstName)
         }
     }
     @Published var lastName: String = "" {
         didSet {
             guard let userId = authService.firebaseAuth.currentUser?.uid else { return }
-            firestreService.addOrUpdateDocument(userId: userId, fieldName: ProperiesNames.lastName, property: lastName )
+            firestoreService.addOrUpdateDocument(userId: userId, fieldName: ProperiesNames.lastName, property: lastName )
         }
     }
     
@@ -73,16 +73,24 @@ final class ProfileViewModal: ObservableObject {
         checkLanguage()
         guard let userId = authService.firebaseAuth.currentUser?.uid else { return }
         
-        firestreService.getDocument(userId: userId, propertyName: ProperiesNames.firstName,  completion: { value in
+        firestoreService.getDocument(userId: userId, propertyName: ProperiesNames.firstName,  completion: { value in
+            guard let value else {return}
             self.firstName = value
         })
         
-        firestreService.getDocument(userId: userId, propertyName: ProperiesNames.lastName,  completion: { value in
+        firestoreService.getDocument(userId: userId, propertyName: ProperiesNames.lastName,  completion: { value in
+            guard let value else {return}
             self.lastName = value
         })
         
-        self.firestreService.getDocument(userId: userId, propertyName: ProperiesNames.avatarUrl,  completion: { value in
+        self.firestoreService.getDocument(userId: userId, propertyName: ProperiesNames.avatarUrl,  completion: { value in
+            guard let value else {
+                self.loading = false
+                return
+            }
+
             let imageData = try? Data(contentsOf: URL(string: value) ?? .applicationDirectory)
+            
             if let data = imageData {
                 DispatchQueue.main.async {
                     self.uiImage = UIImage(data: data)

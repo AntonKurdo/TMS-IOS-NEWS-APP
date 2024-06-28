@@ -105,6 +105,8 @@
 		04ECD02B2C1A30ED001BB887 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ECD02A2C1A30ED001BB887 /* TextButton.swift */; };
 		04F3F61B2C2C6E8600FC2B00 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3F61A2C2C6E8600FC2B00 /* Avatar.swift */; };
 		04F3F61F2C2CB84B00FC2B00 /* ProfileViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3F61E2C2CB84B00FC2B00 /* ProfileViewModal.swift */; };
+		04FBA0DA2C2ED55F003D20EC /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBA0D92C2ED55F003D20EC /* FavouritesView.swift */; };
+		04FBA0DC2C2ED56B003D20EC /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBA0DB2C2ED56B003D20EC /* FavouritesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +151,8 @@
 		04ECD02A2C1A30ED001BB887 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		04F3F61A2C2C6E8600FC2B00 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		04F3F61E2C2CB84B00FC2B00 /* ProfileViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModal.swift; sourceTree = "<group>"; };
+		04FBA0D92C2ED55F003D20EC /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		04FBA0DB2C2ED56B003D20EC /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +290,7 @@
 				04ECD0222C1A23B2001BB887 /* LoginView.swift */,
 				04A521F02C1DFD2200FE8710 /* SignUpView.swift */,
 				046A00EE2C22ED4500A8586B /* TabView.swift */,
+				04FBA0D92C2ED55F003D20EC /* FavouritesView.swift */,
 				04B0B13B2C270FCD009AF688 /* SplashView.swift */,
 				043299D12C2B295E00E8C236 /* ProfileView.swift */,
 			);
@@ -341,6 +346,7 @@
 				04A521EE2C1DF80B00FE8710 /* LoginViewModel.swift */,
 				04B0B1472C272317009AF688 /* HomeViewModel.swift */,
 				04DF18412C21B041008FBA61 /* OnboardingViewModel.swift */,
+				04FBA0DB2C2ED56B003D20EC /* FavouritesViewModel.swift */,
 				04A521F22C1E06E100FE8710 /* SignUpViewModel.swift */,
 				04F3F61E2C2CB84B00FC2B00 /* ProfileViewModal.swift */,
 			);
@@ -504,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FBA0DC2C2ED56B003D20EC /* FavouritesViewModel.swift in Sources */,
 				04ECD0232C1A23B2001BB887 /* LoginView.swift in Sources */,
 				04F3F61F2C2CB84B00FC2B00 /* ProfileViewModal.swift in Sources */,
 				04B0B1562C28601F009AF688 /* DetailsView.swift in Sources */,
@@ -514,6 +521,7 @@
 				04ECD0292C1A2DD2001BB887 /* SecuredTextInput.swift in Sources */,
 				04C436B92C29CD5C008D50B5 /* NewsListView.swift in Sources */,
 				043299D42C2B304300E8C236 /* ImageView.swift in Sources */,
+				04FBA0DA2C2ED55F003D20EC /* FavouritesView.swift in Sources */,
 				04DF18422C21B041008FBA61 /* OnboardingViewModel.swift in Sources */,
 				0482C50B2C2622D8006EBD27 /* CustomTabBar.swift in Sources */,
 				0482C50E2C262348006EBD27 /* Tabs.swift in Sources */,
