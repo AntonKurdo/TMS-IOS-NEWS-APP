@@ -115,7 +115,7 @@
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Вредите имя"
+            "value" : "Введите имя..."
           }
         }
       }
@@ -142,6 +142,7 @@
       }
     },
     "Favourites" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
@@ -362,6 +363,7 @@
       }
     },
     "Settings" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
@@ -418,6 +420,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пропустить"
+          }
+        }
+      }
+    },
+    "You have no favourite news..." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вы еще не добавили сюда ничего..."
           }
         }
       }

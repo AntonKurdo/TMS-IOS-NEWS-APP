@@ -50,7 +50,7 @@ struct OnboardingView: View {
                                     vm.scrolledID! -= 1
                                 }
                             }) {
-                                Text("Prev").foregroundStyle(.accent)
+                                Text("Prev").foregroundStyle(.white)
                             }
                             .disabled(vm.scrolledID == 0)
                             .buttonStyle(.borderedProminent)
@@ -63,7 +63,7 @@ struct OnboardingView: View {
                                 }
 
                             }) {
-                                Text("Next").foregroundStyle(.accent)
+                                Text("Next").foregroundStyle(.white)
                             }
                             .disabled(vm.scrolledID == images.count - 1)
                             .buttonStyle(.borderedProminent)

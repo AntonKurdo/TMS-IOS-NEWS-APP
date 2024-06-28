@@ -18,7 +18,6 @@ class NewsApi {
                     completionHandler(json.articles)
                 }
             case .failure(let error):
-                print(error)
                 DispatchQueue.main.async {
                     errorHandler(error)
                 }
