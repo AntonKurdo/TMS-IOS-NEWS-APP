@@ -50,9 +50,7 @@ struct PopularNewsItem: View {
         NavigationLink(destination: DetailsView(newsItem: newsItem)) {
             ZStack {
                 if let url = newsItem.urlToImage {
-                    AsyncImage(url: URL(string: url)) { result in
-                        result.image?.resizable()
-                    }
+                    ImageView(url: url)
                 }
                 Color(.black.withAlphaComponent(0.5))
                 VStack(alignment: .leading) {

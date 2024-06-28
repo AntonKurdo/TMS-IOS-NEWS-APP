@@ -49,6 +49,11 @@ struct CategoryNews: View {
                     ForEach(news.prefix(9), id: \.urlToImage) { n in
                         CategoryNewsItem(newsItem: n)
                     }
+                    NavigationLink(destination: {
+                        NewsListView(news: news, navigationTitle: activeCategory.capitalized)
+                    }) {
+                        Text("See All About \(activeCategory.capitalized)").padding()
+                    }
                 }
             }
         }
@@ -64,9 +69,7 @@ struct CategoryNewsItem: View {
         } label: {
             ZStack(alignment: .top) {
                 if let url = newsItem.urlToImage {
-                    AsyncImage(url: URL(string: url)) { result in
-                        result.image?.resizable().aspectRatio(contentMode: .fill)
-                    }
+                    ImageView(url: url)
                 }
                 Color(.black.withAlphaComponent(0.5))
             }
@@ -83,6 +86,6 @@ struct CategoryNewsItem: View {
                 }.padding(.all, 8)
             }
         }
-
+        
     }
 }
