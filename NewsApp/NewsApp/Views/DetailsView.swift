@@ -7,15 +7,6 @@ struct DetailsView: View {
         case scrollView
     }
     
-    init(newsItem: Article) {
-        self.newsItem = newsItem
-//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-//        UINavigationBar.appearance().shadowImage = UIImage()
-//        UINavigationBar.appearance().isTranslucent = true
-    }
-
-    
-    
     var body: some View {
         ScrollView {
             ParallaxHeader(
@@ -24,10 +15,7 @@ struct DetailsView: View {
             ) {
                 if let url = newsItem.urlToImage {
                     ZStack {
-                        AsyncImage(url: URL(string: url)) { result in
-                            result.image?.resizable()
-                        }
-                        .scaledToFill()
+                        ImageView(url: url)
                         Color(.black.withAlphaComponent(0.3))
                     }
                 }

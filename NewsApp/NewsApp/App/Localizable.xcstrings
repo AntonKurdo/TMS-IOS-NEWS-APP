@@ -35,6 +35,27 @@
         }
       }
     },
+    "Business" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бизнес"
+          }
+        }
+      }
+    },
+    "Choose the language:" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите язык:"
+          }
+        }
+      }
+    },
     "Continue with" : {
       "localizations" : {
         "ru" : {
@@ -77,13 +98,35 @@
         }
       }
     },
+    "Enter lastname..." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите фамилию..."
+          }
+        }
+      }
+    },
+    "Enter name..." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вредите имя"
+          }
+        }
+      }
+    },
     "Enter password..." : {
       "extractionState" : "manual",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : " Введите пароль..."
+            "value" : "Введите пароль..."
           }
         }
       }
@@ -118,6 +161,17 @@
         }
       }
     },
+    "First Name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Имя"
+          }
+        }
+      }
+    },
     "Get the news faster than others..." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -136,6 +190,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Главная"
+          }
+        }
+      }
+    },
+    "Last Name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фамилия"
           }
         }
       }
@@ -282,6 +347,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Все"
+          }
+        }
+      }
+    },
+    "See All About %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Читать все о %@"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
           }
         }
       }

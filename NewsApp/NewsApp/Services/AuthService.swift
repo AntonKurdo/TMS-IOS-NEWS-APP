@@ -7,7 +7,7 @@ final class AuthService: ObservableObject {
     
     static var shared: AuthService = AuthService()
     
-    private let firebaseAuth = Auth.auth()
+    let firebaseAuth = Auth.auth()
     
     @Published var isAuth: Bool = (Auth.auth().currentUser != nil)
     

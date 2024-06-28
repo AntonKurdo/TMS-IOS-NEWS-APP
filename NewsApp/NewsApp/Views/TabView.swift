@@ -12,15 +12,13 @@ struct Tabs: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $selectedTab) {
-                HomeView().tag(Tab.home)
+                NavigationView {
+                    HomeView()
+                }.tag(Tab.home)
                 Text("Favourites").tag(Tab.favourites)
-                VStack {
-                    Button {
-                        authService.logout()
-                    } label: {
-                        Text("Logout").foregroundColor(.black)
-                    }
-                }.tag(Tab.profile)
+                ProfileView()
+                    .tag(Tab.profile)
+                
             }
             CustomBottomTabBarView(currentTab: $selectedTab)
         }

@@ -27,9 +27,7 @@ struct NewsListItem: View {
                     Color(.black.withAlphaComponent(0.5))
                     
                     if let url = newsItem.urlToImage {
-                        AsyncImage(url: URL(string: url)) { result in
-                            result.image?.resizable().aspectRatio(contentMode: .fill)
-                        }
+                        ImageView(url: url)
                     }
                 }
                 .frame(height: 160)
