@@ -37,7 +37,7 @@ struct FavouritesListItem: View {
     var newsItem: Article
     
     var body: some View {
-        NavigationLink(destination: DetailsView(newsItem: newsItem)) {
+        NavigationLink(destination: DetailsView(newsItem: newsItem).navigationBarBackButtonHidden()) {
             VStack(alignment: .leading) {
                 ZStack {
                     Color(.black.withAlphaComponent(0.5))

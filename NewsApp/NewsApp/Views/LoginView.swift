@@ -33,6 +33,9 @@ struct LoginView: View {
             SecuredTextInput(label: "Password",placeholder: "Enter password...", isRequired: true, value: $vm.password)
             Spacer().frame(height: 164)
         }
+        .onTapGesture {
+            hideKeyboard()
+        }
         .scrollBounceBehavior(.basedOnSize)
             .safeAreaInset(edge: .bottom, content: {
                 VStack {

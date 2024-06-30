@@ -4,6 +4,7 @@ struct DetailsView: View {
     var newsItem: Article
     
     @EnvironmentObject var sharedFavouritesVM: FavouritesViewModel
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     private enum CoordinateSpaces {
         case scrollView
@@ -58,6 +59,12 @@ struct DetailsView: View {
                     Text(newsItem.description).font(.system(size: 20))
                 }.padding()
             }
+        }.overlay(alignment: .topLeading) {
+            Button {
+                self.presentationMode.wrappedValue.dismiss()
+            } label: {
+                Image(systemName: "chevron.backward").foregroundColor(.white).font(.system(size: 20))
+            }.padding(.leading, 16).padding(.top, 16)
         }
     }
 }
