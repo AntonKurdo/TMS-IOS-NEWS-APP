@@ -65,9 +65,9 @@ struct CategoryNewsItem: View {
     
     var body: some View {
         NavigationLink {
-            DetailsView(newsItem: newsItem)
+            DetailsView(newsItem: newsItem).navigationBarBackButtonHidden()
         } label: {
-            ZStack(alignment: .top) {
+            ZStack {
                 if let url = newsItem.urlToImage {
                     ImageView(url: url)
                 }

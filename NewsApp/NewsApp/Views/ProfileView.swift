@@ -45,8 +45,12 @@ struct ProfileView: View {
             }
             Spacer()
         }
+        .background(.white)
         .onAppear {
             vm.getDataFromStorage()
+        }
+        .onTapGesture {
+            hideKeyboard()
         }
     }
 }

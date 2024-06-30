@@ -34,24 +34,28 @@ struct SignUpView: View {
             Spacer().frame(height: 12)
             SecuredTextInput(label: "Repeat Password",placeholder: "Repeat password...", isRequired: true, value: $vm.repeatPassword)
             Spacer().frame(height: 164)
-        }.scrollBounceBehavior(.basedOnSize)
-            .safeAreaInset(edge: .bottom, content: {
-                VStack {
-                    TextButton(buttonLabel: "Sign Up", isDisabled: $vm.isButtonDisabled) {
-                        self.vm.signUp(alerter: alerter)
-                    }
-                    .padding(.top, 33)
-                    .padding(.bottom, 12)
-                    Spacer().frame(height: 8)
-                    HStack {
-                        Text("Already have account?").font(.subheadline)
-                        Button(action: {
-                            self.presentationMode.wrappedValue.dismiss()
-                        }) {
-                            Text("Sign In").foregroundStyle(.accent).fontWeight(.bold).font(.subheadline)
-                        }
+        }
+        .onTapGesture {
+            hideKeyboard()
+        }
+        .scrollBounceBehavior(.basedOnSize)
+        .safeAreaInset(edge: .bottom, content: {
+            VStack {
+                TextButton(buttonLabel: "Sign Up", isDisabled: $vm.isButtonDisabled) {
+                    self.vm.signUp(alerter: alerter)
+                }
+                .padding(.top, 33)
+                .padding(.bottom, 12)
+                Spacer().frame(height: 8)
+                HStack {
+                    Text("Already have account?").font(.subheadline)
+                    Button(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text("Sign In").foregroundStyle(.accent).fontWeight(.bold).font(.subheadline)
                     }
                 }
-            })
+            }
+        })
     }
 }

@@ -47,20 +47,22 @@ struct PopularNewsItem: View {
     var newsItem: Article
     
     var body: some View {
-        NavigationLink(destination: DetailsView(newsItem: newsItem)) {
+        NavigationLink(destination: DetailsView(newsItem: newsItem).navigationBarBackButtonHidden()) {
             ZStack {
                 if let url = newsItem.urlToImage {
                     ImageView(url: url)
                 }
                 Color(.black.withAlphaComponent(0.5))
+            }
+            .frame(width: UIScreen.main.bounds.width * 0.8, height: 200)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(alignment: .center, content: {
                 VStack(alignment: .leading) {
                     Text(newsItem.author ?? "").foregroundColor(.white).font(.caption)
                     Spacer().frame(height: 3)
                     Text(newsItem.title).foregroundColor(.white).font(.system(size: 16)).lineLimit(3)
-                }.padding()
-            }
-            .frame(width: UIScreen.main.bounds.width * 0.8, height: 200)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
+                }.padding(.horizontal, 8)
+            })
             .overlay(alignment: .bottomTrailing) {
                 Text(DateFormatUtil.dateISOToString(newsItem.publishedAt)).foregroundStyle(.white).font(.system(size: 8)).padding(.all, 8)
             }
