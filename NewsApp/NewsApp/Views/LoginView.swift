@@ -1,6 +1,10 @@
 import SwiftUI
+import GoogleSignInSwift
 
 struct LoginView: View {
+    
+    @EnvironmentObject var alerter: Alerter
+    
     @ObservedObject var vm: LoginViewModel = LoginViewModel()
     
     var body: some View {
@@ -12,7 +16,13 @@ struct LoginView: View {
             Spacer().frame(height: 24)
             Text("Continue with").fontWeight(.bold).font(.title3)
             Spacer().frame(height: 12)
-            Text(LocalizedStringKey("Google button"))
+            GoogleSignInButton(style: .icon) {
+                Task {
+                    do {
+                        await vm.googleSignIn()
+                    }
+                }
+            }
             Spacer().frame(height: 12)
             Text(LocalizedStringKey("or")).fontWeight(.bold).font(.title3)
             Spacer().frame(height: 12)
@@ -22,11 +32,15 @@ struct LoginView: View {
             Spacer().frame(height: 12)
             SecuredTextInput(label: "Password",placeholder: "Enter password...", isRequired: true, value: $vm.password)
             Spacer().frame(height: 164)
-        }.scrollBounceBehavior(.basedOnSize)
+        }
+        .onTapGesture {
+            hideKeyboard()
+        }
+        .scrollBounceBehavior(.basedOnSize)
             .safeAreaInset(edge: .bottom, content: {
                 VStack {
                     TextButton(buttonLabel: "Login", isDisabled: $vm.isButtonDisabled) {
-                        vm.signIn()
+                        vm.signIn(alerter: alerter)
                     }
                     .padding(.top, 33)
                     .padding(.bottom, 12)

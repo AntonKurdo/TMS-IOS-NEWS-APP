@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 import Combine
 
 final class SignUpViewModel: ObservableObject {
@@ -19,8 +20,14 @@ final class SignUpViewModel: ObservableObject {
             .store(in: &publishers)
     }
     
-    func signUp() {
-        authService.signUp(email: email, password: password)
+    func signUp(alerter: Alerter) {
+        authService.signUp(email: email, password: password, errorCompletion: { error in
+            alerter.alert = Alert(title: Text("Error"), message: Text(error.localizedDescription))
+        })
+    }
+    
+    func googleSignIn() async {
+        try? await authService.googleSignIn()
     }
 }
 

@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "*" : {
       "localizations" : {
         "ru" : {
@@ -17,6 +20,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Уже есть аккаунт?"
+          }
+        }
+      }
+    },
+    "Always in your pockets" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мы всегда с Вами!"
+          }
+        }
+      }
+    },
+    "Business" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бизнес"
+          }
+        }
+      }
+    },
+    "Choose the language:" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите язык:"
           }
         }
       }
@@ -63,19 +98,113 @@
         }
       }
     },
+    "Enter lastname..." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите фамилию..."
+          }
+        }
+      }
+    },
+    "Enter name..." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите имя..."
+          }
+        }
+      }
+    },
     "Enter password..." : {
       "extractionState" : "manual",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : " Введите пароль..."
+            "value" : "Введите пароль..."
           }
         }
       }
     },
-    "Google button" : {
-
+    "Error" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка"
+          }
+        }
+      }
+    },
+    "Favourites" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Интересное"
+          }
+        }
+      }
+    },
+    "Finish" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закончить"
+          }
+        }
+      }
+    },
+    "First Name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Имя"
+          }
+        }
+      }
+    },
+    "Get the news faster than others..." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Получайте новости первым..."
+          }
+        }
+      }
+    },
+    "Home" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Главная"
+          }
+        }
+      }
+    },
+    "Last Name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фамилия"
+          }
+        }
+      }
     },
     "Login" : {
       "extractionState" : "manual",
@@ -99,7 +228,34 @@
       }
     },
     "Logout" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выйти"
+          }
+        }
+      }
+    },
+    "Newsify" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Newsify"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "След"
+          }
+        }
+      }
     },
     "or" : {
       "localizations" : {
@@ -122,6 +278,48 @@
         }
       }
     },
+    "Popular News" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Популярное"
+          }
+        }
+      }
+    },
+    "Prev" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пред"
+          }
+        }
+      }
+    },
+    "Profile" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профиль"
+          }
+        }
+      }
+    },
+    "Read about important events on fly..." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Читайте о важных событиях на лету..."
+          }
+        }
+      }
+    },
     "Repeat Password" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -140,6 +338,37 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вредите пароль еще раз..."
+          }
+        }
+      }
+    },
+    "See All" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все"
+          }
+        }
+      }
+    },
+    "See All About %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Читать все о %@"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
           }
         }
       }
@@ -181,6 +410,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Зарегистрироваться "
+          }
+        }
+      }
+    },
+    "Skip" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пропустить"
+          }
+        }
+      }
+    },
+    "You have no favourite news..." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вы еще не добавили сюда ничего..."
           }
         }
       }

@@ -4,15 +4,17 @@ struct ContentView: View {
     
     @ObservedObject var authService: AuthService = AuthService.shared
     
+    @UserDefaultsWrapper<Bool>(key: "isOnboardingFinished", default: false) private var isOnboardingFinished
+    
     var body: some View {
         ZStack {
             Color(.white).ignoresSafeArea()
             NavigationView {
                 if authService.isAuth {
-                    Button {
-                        authService.logout()
-                    } label: {
-                        Text("Logout")
+                    if isOnboardingFinished {
+                        Tabs()
+                    } else {
+                        OnboardingView()
                     }
                 } else {
                     LoginView()
@@ -21,3 +23,7 @@ struct ContentView: View {
         }
     }
 }
+
+
+
+
