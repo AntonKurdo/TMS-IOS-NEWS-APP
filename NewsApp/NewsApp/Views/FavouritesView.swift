@@ -19,6 +19,7 @@ struct FavouritesView: View {
                         FavouritesListItem(newsItem: n)
                     }
                 }
+                .contentMargins(.bottom, 75)
             }
         }
         .onAppear {
